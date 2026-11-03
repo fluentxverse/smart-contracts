@@ -1,0 +1,28 @@
+name: Contracts
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lesson-disputes:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: contracts/lesson-disputes/solidity
+    steps:
+      - uses: actions/checkout@v4
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: v1.8.7
+      - name: Install pinned dependencies
+        run: |
+          forge install foundry-rs/forge-std@f3dae6e6ee381f25eb6a246f7da9b85c91a68219 --no-git --shallow
+          forge install OpenZeppelin/openzeppelin-contracts@c64a1edb67b6e3f4a15cca8909c9482ad33a02b0 --no-git --shallow
+      - run: forge fmt --check
+      - run: forge build --sizes
+      - run: forge test -vv
+

@@ -1,0 +1,22 @@
+# Secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+keystore/
+keystores/
+wallets/
+
+# Dependencies and generated Foundry artifacts
+**/lib/
+**/out/
+**/cache/
+**/broadcast/
+node_modules/
+coverage/
+lcov.info
+.DS_Store
+.idea/
+.vscode/
+
