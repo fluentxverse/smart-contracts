@@ -25,4 +25,3 @@ jobs:
       - run: forge fmt --check
       - run: forge build --sizes
       - run: forge test -vv
-

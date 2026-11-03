@@ -33,4 +33,3 @@ proof. The registry does not independently prove attendance or correct staff jud
 Operational signing, protected journals, private feed configuration, and secrets
 remain outside this source repository. Do not use the deployment script to change
 the existing deployment or bypass the approved operational process.
-

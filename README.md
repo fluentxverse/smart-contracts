@@ -46,4 +46,3 @@ Extracted from the FluentXVerse workspace on November 3, 2026. Contract source a
 dispute tests are preserved without behavioral changes. `VERIFICATION.md` retains
 dated internal verification history; the deployment-status document supersedes its
 older staging-only statements. Source files retain their SPDX license identifiers.
-
